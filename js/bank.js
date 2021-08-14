@@ -8,6 +8,8 @@ document.getElementById('login-submit').addEventListener('click', function () {
     const userPass = document.getElementById("user-password").value;
     // console.log(userPass);
 
+
+    // check user and pass
     if (userEmail == "sontan@bap.com" && userPass == "secret") {
         window.location.href = "banking.html";
     }
