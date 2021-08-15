@@ -66,25 +66,50 @@
 // })
 
 
+// document.getElementById("deposit-button").addEventListener('click', function () {
+//     const depositInput = document.getElementById("deposit-input");
+//     const depositAmountText = depositInput.value;
+//     const depositAmount = parseFloat(depositAmountText);
+
+//     const depositTotal = document.getElementById("deposit-total");
+//     const currentDepositAmount = depositTotal.innerText;
+//     const totalDepositAmount = parseFloat(currentDepositAmount) + depositAmount;
+//     depositTotal.innerText = totalDepositAmount;
+
+//     // update total balance 
+
+//     const totalBalance = document.getElementById("balance-total");
+//     const totalBalanceText = totalBalance.innerText;
+
+//     const newTotalBalance = parseFloat(totalBalanceText) + parseFloat(totalDepositAmount);
+//     totalBalance.innerText = newTotalBalance;
+
+
+//     // clearing input field 
+//     depositInput.value = '';
+// })
+
+// again practise of deposit and balance 
+
 document.getElementById("deposit-button").addEventListener('click', function () {
     const depositInput = document.getElementById("deposit-input");
     const depositAmountText = depositInput.value;
-    const depositAmount = parseFloat(depositAmountText);
+    const newDepositAmount = parseFloat(depositAmountText);
 
     const depositTotal = document.getElementById("deposit-total");
-    const currentDepositAmount = depositTotal.innerText;
-    const totalDepositAmount = parseFloat(currentDepositAmount) + depositAmount;
-    depositTotal.innerText = totalDepositAmount;
+    const currentTotalDeposit = depositTotal.innerText;
+    const newTotalDeposit = parseFloat(currentTotalDeposit) + newDepositAmount;
+    depositTotal.innerText = newTotalDeposit;
 
-    // update total balance 
+    // update balance total 
 
     const totalBalance = document.getElementById("balance-total");
-    const totalBalanceText = totalBalance.innerText;
+    const totalBalaneText = totalBalance.innerText;
 
-    const newTotalBalance = parseFloat(totalBalanceText) + parseFloat(totalDepositAmount);
-    totalBalance.innerText = newTotalBalance;
+    const updatedTotalBalance = parseFloat(totalBalaneText) + parseFloat(newTotalDeposit);
+    totalBalance.innerText = updatedTotalBalance;
 
-
-    // clearing input field 
+    // clearing the input field 
     depositInput.value = '';
+
 })
