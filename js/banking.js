@@ -113,3 +113,29 @@ document.getElementById("deposit-button").addEventListener('click', function () 
     depositInput.value = '';
 
 })
+
+// withdraw section 
+document.getElementById("withdraw-button").addEventListener('click', function () {
+    const withdrawInput = document.getElementById("withdraw-input");
+    const withdrawInputText = withdrawInput.value;
+    const withdrawAmount = parseFloat(withdrawInputText);
+
+
+    const withdrawBalance = document.getElementById("withdraw-total");
+    const currentWithdrawBalance = withdrawBalance.innerText;
+    const totalWithdrawBalance = parseFloat(currentWithdrawBalance) + parseFloat(withdrawAmount);
+    withdrawBalance.innerText = totalWithdrawBalance;
+
+    // connect with total balance 
+
+    const totalBalanceBeforeWithdraw = document.getElementById("balance-total");
+    const totalBalanceBeforeWithdrawText = totalBalanceBeforeWithdraw.innerText;
+
+    const newBalanceAfterWithdraw = parseFloat(totalBalanceBeforeWithdrawText) - parseFloat(totalWithdrawBalance);
+    totalBalanceBeforeWithdraw.innerText = newBalanceAfterWithdraw;
+
+
+
+    // clearing input field 
+    withdrawInput.value = '';
+})
